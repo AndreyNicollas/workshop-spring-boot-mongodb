@@ -1,6 +1,7 @@
 package com.andrey_nicollas.mongodb_demo.services;
 
 import com.andrey_nicollas.mongodb_demo.domain.User;
+import com.andrey_nicollas.mongodb_demo.dto.UserDTO;
 import com.andrey_nicollas.mongodb_demo.repository.UserRepository;
 import com.andrey_nicollas.mongodb_demo.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,13 @@ public class UserService {
         User user = repository.findById(id)
                 .orElseThrow(()-> new ObjectNotFoundException("Objeto não encontrado!"));
         return user;
+    }
+
+    public User insert(User obj) {
+        return repository.insert(obj);
+    }
+
+    public User fromDTO(UserDTO objDto) {
+        return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
     }
 }
