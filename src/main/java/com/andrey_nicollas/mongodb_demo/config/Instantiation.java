@@ -37,7 +37,7 @@ public class Instantiation implements CommandLineRunner {
         User bob = new User(null, "Bob Grey", "bob@gmail.com");
         User andrey = new User(null, "Andrey Nicollas Costa de Sousa", "andrey974@gmail.com");
 
-        // salavando primeiro os usuários no banco de dados,
+        // salvando primeiro os usuários no banco de dados,
         // depois fazer a cópia para o AuthorDTO com os comentários aparecendo com a interação no id;
         userRepository.saveAll(Arrays.asList(maria, alex, bob, andrey));
 
