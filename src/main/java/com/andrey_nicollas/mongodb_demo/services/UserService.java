@@ -35,7 +35,7 @@ public class UserService {
     }
 
     public User update(User obj) {
-        User newUser = repository.findById(obj.getId()).orElseThrow(() -> new ObjectNotFoundException("Erro."));
+        User newUser = repository.findById(obj.getId()).orElseThrow(() -> new ObjectNotFoundException("Error."));
         updateData(newUser, obj);
         return repository.save(newUser);
     }
