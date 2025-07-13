@@ -1,7 +1,6 @@
 package com.andrey_nicollas.mongodb_demo.services;
 
 import com.andrey_nicollas.mongodb_demo.domain.Post;
-import com.andrey_nicollas.mongodb_demo.domain.User;
 import com.andrey_nicollas.mongodb_demo.repository.PostRepository;
 import com.andrey_nicollas.mongodb_demo.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,6 @@ public class PostService {
     }
 
     public List<Post> findByTitle(String text) {
-        return postRepository.findByTitleContainingIgnoreCase(text);
+        return postRepository.searchTitle(text);
     }
 }
