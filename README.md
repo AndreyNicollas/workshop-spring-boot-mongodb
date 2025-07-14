@@ -10,40 +10,60 @@ O principal objetivo deste projeto é consolidar conhecimentos fundamentais no d
 
 Durante o desenvolvimento deste sistema, implementei diversas funcionalidades essenciais para o backend de uma aplicação web moderna, incluindo:
 
-- Criação de entidades e relacionamento com **JPA e Hibernate**
+- Criação de entidades e relacionamento
 - Exposição de endpoints REST com **Spring MVC**
 - Operações de **CRUD** para os principais recursos da aplicação
 - Manipulação de dados via **camadas de serviço e repositório**
-- Integração com banco de dados relacional (**H2**, **MySQL** ou **PostgreSQL**)
-- Tratamento centralizado de exceções com retorno de mensagens padronizadas em JSON
+- Integração com banco de dados relacional **MongoDB**
+- Tratamento centralizado de exceções com retorno de mensagens padronizadas em JSON com Postman
+
+### 🗃️ Banco Relacional (com JPA + Hibernate):
+
+- Mapeamento de entidades Java com **JPA**
+- Operações CRUD com **Spring Data JPA**
+- Relacionamentos complexos: `@OneToMany`, `@ManyToOne`, etc.
+
+### 🍃 Banco NoSQL (com MongoDB):
+
+- Modelagem orientada a documentos com **MongoDB**
+- Criação de agregados como unidades de dados reutilizáveis
+- Persistência de dados complexos em documentos JSON
+- Uso do **Spring Data MongoDB** para acesso ao banco
+- Ganhos de performance em leitura e escalabilidade horizontal
 
 ---
 
 ## 🧠 Aprendizados e Consolidação de Conhecimentos
 
-Este projeto foi essencial para aplicar na prática tudo que estudei sobre o ecossistema Spring. Foi uma verdadeira imersão em desenvolvimento backend, permitindo entender um pouco mais sobre o universo Spring:
+Este projeto me proporcionou uma compreensão prática da **interação entre aplicações Java com diferentes tipos de bancos de dados**, reforçando conceitos essenciais como:
 
-### ✔️ Fundamentos aplicados:
+### ✔️ Fundamentos com Spring Boot
 
-- Estruturação de um projeto Spring Boot com **Maven**
-- Uso de **anotações do Spring** para configurar dependências, serviços e repositórios
-- **Serialização de objetos Java** em JSON para consumo via API
-- Boas práticas de arquitetura, separando o projeto em **camadas (controller, service, repository, model)**
+- Criação de endpoints REST com Spring MVC
+- Organização em camadas (`controller`, `service`, `repository`, `model`)
+- Uso eficiente de anotações (`@RestController`, `@Service`, `@Repository`, etc.)
 
-### ✔️ Integração com banco de dados:
+### ✔️ Persistência Relacional (JPA + Hibernate)
 
-- Criação e mapeamento de entidades com **JPA**
-- Relacionamentos `@OneToMany`, `@ManyToOne`, `@ManyToMany`
-- Persistência com **Spring Data JPA**
-- Validações e uso de **queries personalizadas**
+- Modelagem de entidades relacionais
+- Execução de transações
+- Estratégias de carregamento (`LAZY`, `EAGER`)
+- Tratamento de exceções e validações
 
-### ✔️ Lógica de negócio:
+### ✔️ Persistência NoSQL com MongoDB
 
-- Controle de fluxo com **camadas de serviço**
-- Tratamento de erros com **exceções personalizadas**
-- Respostas HTTP padronizadas com códigos apropriados (`200 OK`, `404 Not Found`, `201 Created`, etc.)
+- Modelagem baseada em agregados
+- Organização de dados em documentos aninhados
+- Simplicidade de leitura sem necessidade de joins
+- Entendimento de quando usar NoSQL vs. SQL, com base nos requisitos
 
-💡 **Conclusão:** Esse projeto foi um divisor de águas para consolidar minha base com **Spring Boot**, me proporcionando mais confiança e clareza para evoluir como desenvolvedor Java e criar APIs RESTful robustas e bem estruturadas.
+### ✔️ Visão Ampliada
+
+- Diferença entre normalização e desnormalização
+- Trade-offs de performance, escalabilidade e complexidade entre os dois modelos
+- Benefícios de usar MongoDB em cenários com alto volume de leitura e escrita distribuída
+
+💡 **Conclusão:** Este projeto foi crucial para não apenas consolidar minha base em Spring Boot e bancos relacionais, mas também para **entender a evolução natural para bancos NoSQL**, ampliando minha capacidade de escolha tecnológica de forma consciente.
 
 ---
 
@@ -54,8 +74,9 @@ Este projeto foi essencial para aplicar na prática tudo que estudei sobre o eco
 - Spring Web (Spring MVC)
 - Spring Data JPA
 - Hibernate ORM
-- H2 Database / MySQL / PostgreSQL
+- H2 Database | MySQL | PostgreSQL
 - Maven
+- Postman
 
 ---
 
